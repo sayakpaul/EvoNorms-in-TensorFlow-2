@@ -14,5 +14,6 @@ Presents implementations of `EvoNormB0` and `EvoNormS0` layers as proposed in [E
 Follow experimental summary here: https://app.wandb.ai/sayakpaul/evonorm-tf2. 
 
 ## References
+- [3 ways to create a Keras model with TensorFlow 2.0 (Sequential, Functional, and Model Subclassing)](https://www.pyimagesearch.com/2019/10/28/3-ways-to-create-a-keras-model-with-tensorflow-2-0-sequential-functional-and-model-subclassing/)
 - [Evolving Normalization-Activation Layers](https://www.youtube.com/watch?v=RFn5eH5ZCVo) video guide by Henry AI Labs.
-- https://github.com/lonePatient/EvoNorms_PyTorch.
+- [EvoNorms_PyTorch](https://github.com/lonePatient/EvoNorms_PyTorch).
