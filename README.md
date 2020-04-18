@@ -8,10 +8,8 @@ Presents implementations of `EvoNormB0` and `EvoNormS0` layers as proposed in [E
 - `Mini_Inception_EvoNorm.ipynb`: Shows implementations of `EvoNormB0` and `EvoNormS0` layers and experiments with the Mini Inception architecture. 
 - `layer_utils`: Ships `EvoNormB0` and `EvoNormS0` layers as stand-alone classes in `tf.keras`. 
 
-## Performance comparison
-
 ## Experimental Summary
-Follow experimental summary here: https://app.wandb.ai/sayakpaul/evonorm-tf2. 
+Follow experimental summary [here](https://app.wandb.ai/sayakpaul/evonorm-tf2/reports/EvoNorm-layers-in-TensorFlow-2--Vmlldzo4MzYzMQ).
 
 ## References
 - [3 ways to create a Keras model with TensorFlow 2.0 (Sequential, Functional, and Model Subclassing)](https://www.pyimagesearch.com/2019/10/28/3-ways-to-create-a-keras-model-with-tensorflow-2-0-sequential-functional-and-model-subclassing/) by PyImageSearch
