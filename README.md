@@ -6,6 +6,7 @@ Presents implementations of `EvoNormB0` and `EvoNormS0` layers as proposed in [E
 ## About the files
 - `Mini_Inception_BN_ReLU.ipynb`: Shows a bunch of experiments with the Mini Inception architecture and BN-ReLU combination.
 - `Mini_Inception_EvoNorm.ipynb`: Shows implementations of `EvoNormB0` and `EvoNormS0` layers and experiments with the Mini Inception architecture. 
+- `Mini_Inception_EvoNorm_Sweep.ipynb`: Does a hyperparameter search on the `groups` hyperparameter in `EvoNormS0` along with a few others. 
 - `layer_utils`: Ships `EvoNormB0` and `EvoNormS0` layers as stand-alone classes in `tf.keras`. 
 
 ## Experimental Summary
