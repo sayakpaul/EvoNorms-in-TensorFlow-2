@@ -15,7 +15,7 @@ class EvoNorm2dB0(tf.keras.layers.Layer):
 		self.nonlinear = nonlinear
 		self.momentum = momentum
 		self.eps = eps
-		self.running_var = tf.ones((1, in_channels, 1, 1))
+		self.running_var = tf.ones((1, 1, 1, in_channels))
 
 		def build(self):
 			self.gamma = self.add_variable("gamma",
@@ -29,21 +29,20 @@ class EvoNorm2dB0(tf.keras.layers.Layer):
 									shape=(1, 1, 1, self.in_channels),
 									initializer=tf.initializers.Ones())
 
-
 		def call(self, x):
 			N, H, W, C = tf.shape(x)
 
 			if self.training:
 				x1 = tf.transpose(x, [3, 0, 1, 2])
 				x1 = tf.reshape(x1, (C, -1))
-				var = tf.math.reduce_std(x1, axis=1)
-				var = tf.reshape(var, (1, C, 1, 1))
+				var = tf.math.square(tf.math.reduce_std(x1, axis=1))
+				var = tf.reshape(var, (1, 1, 1, C))
 				self.running_var = self.momentum * self.running_var + (1 - self.momentum) * var
 			else:
 				var = self.running_var
 
 			if self.nonlinear:
-				den = tf.math.maximum(tf.sqrt(var+self.eps), self.v * x + instance_std(x))
+				den = tf.math.maximum(tf.sqrt(var), self.v * x + instance_std(x))
 				return x / den * self.gamma + self.beta
 			else:
 				return x * self.gamma + self.beta
