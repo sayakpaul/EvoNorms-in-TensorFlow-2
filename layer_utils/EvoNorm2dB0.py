@@ -19,14 +19,14 @@ class EvoNorm2dB0(tf.keras.layers.Layer):
 
 		def build(self):
 			self.gamma = self.add_variable("gamma",
-									shape=(1, self.in_channels, 1, 1),
+									shape=(1, 1, 1, self.in_channels),
 									initializer=tf.initializers.Ones())
 			self.beta = self.add_variable("beta",
-									shape=(1, self.in_channels, 1, 1),
+									shape=(1, 1, 1, self.in_channels),
 									initializer=tf.initializers.Zeros())
 			if self.nonlinear:
 				self.v = self.add_variable("v",
-									shape=(1, self.in_channels, 1, 1),
+									shape=(1, 1, 1, self.in_channels),
 									initializer=tf.initializers.Ones())
 
 
