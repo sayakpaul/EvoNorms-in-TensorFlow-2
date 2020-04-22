@@ -13,7 +13,7 @@ Presents implementations of `EvoNormB0` and `EvoNormS0` layers as proposed in [E
 - `layer_utils`: Ships `EvoNormB0` and `EvoNormS0` layers as stand-alone classes in `tf.keras`. 
 
 ## Experimental Summary
-Follow experimental summary [here](https://app.wandb.ai/sayakpaul/EvoNorm-TensorFlow2/reports/EvoNorm-layers-in-TensorFlow-2--Vmlldzo4Mzk3MQ).
+Follow experimental summary [here](https://bit.ly/3arUw9q).
 
 ## References
 - [3 ways to create a Keras model with TensorFlow 2.0 (Sequential, Functional, and Model Subclassing)](https://www.pyimagesearch.com/2019/10/28/3-ways-to-create-a-keras-model-with-tensorflow-2-0-sequential-functional-and-model-subclassing/) by PyImageSearch
